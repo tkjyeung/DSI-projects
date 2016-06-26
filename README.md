@@ -35,7 +35,8 @@ This course is designed to give you the deep dive into the world of *Data Scienc
 ## In this Repository:
 
 1. [Classes](./classes) - instructions, high level review, and baseline materials for our course projects, lessons, and labs; including content outlines, datasets, starter and solution code, and other resources.
-2. [Proejects](./projects) - everything related to the weekly projects - descriptions, datasets rubriks.
+2. [Projects](./projects) - everything related to the weekly projects - descriptions, datasets rubriks.
+3. [Misc](./misc) - any other materials
 
 ---
 
