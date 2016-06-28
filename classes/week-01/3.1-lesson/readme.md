@@ -21,8 +21,8 @@ Week 1 | Lesson 3.1
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
 |:-:|---|---|
-| 40-45 min  | [Guided Practice](#ind-practice<a name="opening"></a>)  |  |
-| 40-45 min  | [Independent Practice](#exercise-overview)  |  |
+| 40-45 min  | [Independent Practice](#ind-practice<a name="opening"></a>)  |  |
+| 40-45 min  | [Review](#exercise-overview)  |  |
 | 5 min  | [Conclusion](#conclusion)  |   |
 
 ---
