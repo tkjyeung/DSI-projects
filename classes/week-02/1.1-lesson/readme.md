@@ -25,11 +25,6 @@ make sure you have all the dependencies installed as well:
     - python-dateutil: 1.5 or higher
     - pytz: needed for time zone support
 
-### INSTRUCTOR PREP
-*Before this lesson, instructors will need to:*
-- Read in / Review any dataset(s) & starter/solution code
-- Generate a brief slide deck
-
 
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
@@ -56,9 +51,9 @@ structures and data analysis tools for the Python programming language.
 <a name="Read csv"></a>
 ## Demo / Guided Practice: Topic (10 mins)
 
-[demo code](https://github.com/generalassembly-studio/dsi-course-materials/blob/W2-L1.1/curriculum/04-lessons/week-02/1.1-lesson/code/Demo%20Code%20-%20W2%20L1.1%20Intro%20to%20Pandas%201.ipynb)
+[demo code](./code/w2-1.1-demo.ipynb)
 
-in iPython notebook type:
+in JuPyter , type:
 ```python
 import pandas as pd
 import numpy as np
@@ -73,7 +68,7 @@ df = pd.read_csv('sales.csv')
 
 **Check:** This looks familiar...didn't we already learn how to read in csv files?
 Yes, but that was using Python without any libraries or packages. It took 5 lines of
-Python [W1 L3.2](https://github.com/generalassembly-studio/dsi-course-materials/blob/master/curriculum/04-lessons/week-01/3.2-lesson/code/Demo%20Code%20-%20Week%201%20Lesson%203.2%20-%20iPython%20Notebooks%2C%20Data%20Values%2C%20CSV%20Library.ipynb), but using Pandas it only takes one line. Nice!
+Python [W1 L3.2](https://github.com/ga-students/DSI-HK-1/blob/master/classes/week-01/3.2-lesson/code/w1-3.2-demo.ipynb), but using Pandas it only takes one line. Nice!
 
 
 
@@ -152,16 +147,11 @@ df.iloc[1,1]
 
 **Bonus**
 - Convert one data type to another in the star wars survey csv
-- Create a dummy variable for the yes and no answers
 
 
 <a name="conclusion"></a>
 ## Conclusion (5 mins)
-We read a csv file into a pandas dataframe with just one line of code. Compared to last week, when
-we used just used Python to read in a csv file, it took about 5 lines of code. Pandas is already making
-our data lives easier. We also took a look at how easy pandas makes it to get some general information
-about our dataset by looking at the head, tail, and summary stats. Lastly, we started to select and
-slice our dataset.
+We read a csv file into a pandas dataframe with just one line of code. Compared to last week, when we used just used Python to read in a csv file, it took about 5 lines of code. Pandas is already making our data lives easier. We also took a look at how easy pandas makes it to get some general information about our dataset by looking at the head, tail, and summary stats. Lastly, we started to select and slice our dataset.
 
 
 ### ADDITIONAL RESOURCES
