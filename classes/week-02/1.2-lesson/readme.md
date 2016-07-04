@@ -16,11 +16,6 @@ Week 2 | Lesson 1.2
 - Explain the objectives for Project 2
 
 
-### INSTRUCTOR PREP
-*Before this lesson, instructors will need to:*
-- Read in / Review any dataset(s) & starter/solution code
-- Generate a brief slide deck
-
 
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
