@@ -53,7 +53,7 @@ List comprehensions are essentially replacements for iteration control statement
 
 Follow along for the demos in this notebook:
 
-[python guided practice notebook]('./code/w1-5.1-list-comprehensions-demo.ipynb')
+[python guided practice notebook](./code/w1-5.1-list-comprehensions-demo.ipynb)
 
 
 ##### What are list comprehensions?
@@ -303,7 +303,7 @@ records = pd.DataFrame({col:vals for col, vals in zip(column_names, values)})
 - Practice list comprehensions on your own
 - Problems are separated into easy, medium, and hard categories
 
-[independent practice problems]('./code/starter-code/wk1-5.1-independent-practice.ipynb')
+[independent practice problems](./code/starter-code/wk1-5.1-independent-practice.ipynb)
 
 <a name="conclusion"></a>
 ## Conclusion (5 mins)
