@@ -137,18 +137,6 @@ and explore the fit and the effect of scaling. (10 mins)
 - **Bonus**: try a few extra models like a [support vector machine](http://scikit-learn.org/stable/auto_examples/svm/plot_svm_regression.html). What do you think
 about the goodness of fit? Scaling is _required_ for this model ..
 
-# Remove this
-
-> Scaling doesn't affect linear regression typically. The Bonus exercise asks
-students to choose another model that scaling is necessary for. Students may
-need a little guidance but really the need to only change one line (the model).
-
-> If students don't make it to the bonus exercise, take a few minutes at the
-end to show them that scaling does sometimes matter for e.g. and SGDRegressor.
-The support vector machine is a great fit!
-
-> [Solution code](./code/solution-code/Feature-Scaling-Solutions.ipynb) ..
-
 
 **Check:** Does scaling affect linear regression?
 
