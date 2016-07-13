@@ -22,13 +22,6 @@ Week 3 | Lesson 4.3
 *Before this lesson, you should already be able to:*
 - Apply critical and scientific thinking
 
-### INSTRUCTOR PREP
-*Before this lesson, instructors will need to:*
-- Consider adding a personalized scenario of assessing data for your students.
-- Generate a brief slide deck
-- Prepare any specific materials
-- Provide students with additional resources
-
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
 |:-:|---|---|
