@@ -150,16 +150,6 @@ Your tasks are:
 
 ---
 
-<a name="ind-practice"></a>
-## Independent Practice: Explore Bias and Variance (20-25 minutes)
-
-Now let's look at some situations where adding more polynomial terms decreases
-both bias and variance.
-
-Get started with the [Starter Code](./code/starter-code/Bias-Variance-starter.ipynb)!
-
----
-
 <a name="conclusion"></a>
 ## Conclusion (5-10 mins)
 There are three fundamental sources of error that arise when fitting a model to data:
