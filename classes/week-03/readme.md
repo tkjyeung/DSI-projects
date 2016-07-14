@@ -7,8 +7,8 @@ This is a summary of the materials provided for Week 3 of the Data Science Immer
 Session Time | Day 1                                                  | Day 2                                        | Day 3                     | Day 4                                 | Day 5
 ------------ | ------------------------------------------------------ | -------------------------------------------- | ------------------------- | ------------------------------------- | -----------------------------------
 9-10         | [Week intro][3-1.0] + [Project 2 Presentations][2-5.4] | [Morning Exercise][3-1.0]                    | [Gradient Descent][3-4.1] | [Bias Variance Tradeoff][3-2.1]       | [(Reflection)][3-5.0]
-10-11:30     | [Intro to Modeling][3-1.1]                             | [Regression Metrics & Loss Functions][3-3.1] |                           |                                       | [Stakeholder Analysis][3-5.1]
-11:30-1      | [Data Plotting][3-1.2]                                 | [Train/Test Split][3-3.2]                    | [Feature Scaling][3-4.2]  | [Evaluating Model Fit][3-2.2]         | [Presenting to Stakeholders][3-5.2]
+10-11:30     | [Intro to Modeling][3-1.1]                             | [Regression Metrics & Loss Functions][3-3.1] | [Feature Scaling][3-4.2]  | [Evaluating Model Fit][3-2.2]         | [Stakeholder Analysis][3-5.1]
+11:30-1      | [Data Plotting][3-1.2]                                 | [Train/Test Split][3-3.2]                    |                           |                                       | [Presenting to Stakeholders][3-5.2]
 2-3:30       | [Intro to Stats Models & Sklearn][3-1.3]               | [Data Workflow Lab 1: Cleaning][3-3.3]       | [Study Design][3-4.3]     | [Regularization & Overfitting][3-2.3] | [+Instructor Choice][3-5.3]
 3:30-5       | [Linear Regression Lab][3-1.4]                         | [Data Workflow Lab 2: Optimizing][3-3.4]     | [Case Study][3-4.4]       | [Regularization Lab][3-2.4]           | [Project 3: Presentations][3-5.4]
 
