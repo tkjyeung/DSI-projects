@@ -22,10 +22,6 @@ Week 4 | Lesson 1.2
 - Describe kNN classification
 - Build and interpret a confusion matrix
 
-### INSTRUCTOR PREP
-*Before this lesson, instructors will need to:*
-- Modify Demo Notebook w additional code snippets
-- Plan for web scraping examples with BeautifulSoup, Mechanize, Import.io
 
 ### LESSON GUIDE
 | TIMING  | TYPE  | TOPIC  |
