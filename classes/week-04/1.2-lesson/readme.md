@@ -42,14 +42,12 @@ Week 4 | Lesson 1.2
 - Review pre-work, projects, or exit ticket, if applicable
 - Review current lesson objectives
 
-> **Check:** Ask students to define, explain, or recall any **general** prior concepts or tools.
 
 <a name="introduction"></a>
 ## Introduction: Web Scraping! (5 mins)
 
 Web scraping is a technique of extracting information from websites. You can use web scraping to focus on transforming *unstructured data* from the web into *structured data* that can be stored and analyzed. Web pages contain a wealth of information (in text form), designed mostly for human consumption.
 
-> Instructor Note: Take a pulse check on your student's background knowledge. If needed, take 5 minutes to review basic DOM principles. If more practice is needed, note range and plan for a quick morning exercise review session. Example materials are available from our FT and PT programming courses.
 
 <a name="demo1"></a>
 ## Demo: BeautifulSoup (10 mins)
@@ -71,8 +69,6 @@ print tds[0].string, tds[1].string
 
 # will print date and sunrise
 ```
-
-> Note: If needed, review and test out BeautifulSoup on a few more examples.
 
 
 <a name="demo2"></a>
@@ -131,7 +127,6 @@ Data types are automatically cleaned and standardized to a data set, which means
 <a name="guided-practice"></a>
 ## Guided Practice: Import.io & Web Scraping (15 mins)
 
-> Note: Open up web pages and demonstrate using import.io on a sample structured website like [Ikea](www.ikea.com)
 
 Let’s say we would like to extract information on the items for sale on the IKEA website.
 
@@ -152,8 +147,6 @@ The data can now be opened in a CSV file, ready for use with Pandas:
 
 
 On your own, review the [Import.io documentation](www.import.io) and then practice scraping sample results from the [IKEA website](https://www.ikea.com) website.
-
-> **Check**: Are students able to successfully scrape structured data? If so, ove onto the independent practice.
 
 
 <a name="ind-practice"></a>
