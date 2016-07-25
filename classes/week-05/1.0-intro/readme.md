@@ -1,6 +1,32 @@
-# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) DSI - Week 5
+---
+title: Week 5 - Project Review
+duration: '1:00'
+creator:
+  name: Luiz Pizzato
+  city: HK
+---
 
-This is a summary of the materials provided for Week 5 of the Data Science Immersive.
+# ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png) Week 5 - Project Review
+
+Week 5 | Lesson 1.0 | Hong Kong
+
+Instructors: Luiz Pizzato and Wee Kiang Yeo ..
+
+## LEARNING OBJECTIVES
+
+_After this lesson, you will be able to:_
+
+- What will happen in Week 5
+- Feedback from Project 3 ..
+
+## LESSON GUIDE
+
+TIMING | TYPE             | TOPIC
+:----: | ---------------- | ----------------------
+5 min  | Week 5 Intro     | Week 5 overview
+5 min  | Conclusion       | Review & Recap
+
+--------------------------------------------------------------------------------
 
 ## Week 5: Classification & Databases
 
