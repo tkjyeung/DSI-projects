@@ -56,15 +56,6 @@ Each processing stage has an input, where data comes in, and an output, where pr
 
 **Check:** Ask the students to give some examples of data transformations.
 
-> Examples of data transformations:
-> - change in units (lbs -> kg)
-> - change of scale
-> - change of base
-> - text vectorization
-> - image vectorization
-> - sound file vectorization
-> - missing data imputation
-> - clipping
 
 Pipelines provide a higher level of abstraction than the individual building blocks of a data science process and are a great way to organize analyses.
 
@@ -278,7 +269,7 @@ pipeline.predict_proba(X_new)
     array([[ 0.46800424,  0.53199576],
            [ 0.28316267,  0.71683733],
            [ 0.00514   ,  0.99486   ],
-           ..., 
+           ...,
            [ 0.29063018,  0.70936982],
            [ 0.60683954,  0.39316046],
            [ 0.66318704,  0.33681296]])
@@ -393,10 +384,10 @@ import numpy as np
 class FeatureMultiplier(BaseEstimator, TransformerMixin):
     def __init__(self, factor):
         self.factor = factor
-        
+
     def transform(self, X, *_):
         return X * self.factor
-    
+
     def fit(self, *_):
         return self
 
@@ -433,19 +424,6 @@ fm.transform(test)
 
 **Check**: Revisit the dataset of lab 1.4. How could you use `make_pipeline` and `make_union` to build a pipeline that performs the same steps all in one pass?
 
-> Answer: you will have to build something like this:
->
-    Data --> SelectCategoricalFeaturesTransformer --> OneHotEncoder --> FeatureUnion --> Model
-          \-> SelectNumericalFeaturesTransformer ------> Scaler ----/
-A good practice for instructor is to have students work in this way:
-1. review lab 1.4 and identify the steps that were performed
-- for each of this steps figure out what the input and what the output is
-    - is the input the whole dataframe or only a subset of the features?
-    - is the output new features or a prediction?
-- for each of this steps identify what kind of transformer is needed:
-    - is it a custom transformer?
-    - does scikit-learn provide a transformer like this out of the box?
-- if different features are treated differently, have students figure out how to recombine them (Feature Union)
 
 <a name="conclusion"></a>
 ## Conclusion (5 mins)
