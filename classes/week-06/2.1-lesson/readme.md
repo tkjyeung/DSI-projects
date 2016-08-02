@@ -107,9 +107,21 @@ _Normalized_ tables save the storage space by separating the information. Howeve
 
 
 **Check:** Are the three tables above Normalized or Denormalized?
-
+> Answer: Normalized
 
 **Check:** Can you make an example of a denormalized table derived from the ones above?
+> Answer: e.g.
+>
+| OrderID |  ProductID |  UnitPrice | Quantity | Discount | CustomerID | EmployeeID | OrderDate| RequiredDate | ShippedDate | ShipVia | Freight | ShipName|ShipAddress |ShipCity | ShipPostalCode | ShipCountry |
+| ----- |
+|10248|11|14|12|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|10248|42|9.8|10|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|10248|72|34.8|5|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|10249|14|18.6|9|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|10249|51|42.4|40|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|10250|41|7.7|10|0| VINET|5 | 1996-07-04 | 1996-08-01 | 1996-07-16| 3 | 32.38 | Vins et alcools Chevalier | 59 rue de l'Abbaye | Reims| 51100| France|
+|...|...|...|...|...|...|...|...|...|...|...|...|...|...|...|...|...|
+
 
 
 ### Joins
@@ -117,7 +129,7 @@ _Normalized_ tables save the storage space by separating the information. Howeve
 _SQL joins_ are used when data is spread in different tables. A _join_ operation allows to combine rows from two or more tables in a single new table. In order for this to be possible, a common field between the tables need to exist.
 
 **Check:** Where have you encountered a similar functionality in Pandas?
-
+> Answer: the merge function in Pandas.
 
 **Check:** Can you make a couple of examples of how you used that Pandas function in the past?
 
@@ -174,7 +186,7 @@ Given the two tables above, we would like to produce a new table that looks like
 |10355|Around the Horn|11/15/1996|
 |10278|Berglunds snabbköp|8/12/1996|
 
-where the `OrderID` and `OrderDate` come from the `orders` table and the `CompanyName` comes from the `customers` table. This can be achieved in `SQL` simply using the next statement:
+where the `OrderID` and `OrderDate` come from the `orders` table and the `CompanyName` comes from the `customers`table. This can be achieve in `SQL` simply using the next statement:
 
 
 ```sql
@@ -191,7 +203,7 @@ There are several types of join operations.
 - INNER JOIN: Returns all rows when there is at least one match in BOTH tables
 - LEFT JOIN: Return all rows from the left table, and the matched rows from the right table
 - RIGHT JOIN: Return all rows from the right table, and the matched rows from the left table
-- FULL (outer) JOIN: Return all rows when there is a match in ONE of the tables
+- FULL JOIN: Return all rows when there is a match in ONE of the tables
 
 It is much easier to understand joins as operations of intersection of sets. In-fact, there's a mathematically sound theory behind, called [Relational Algebra](https://en.wikipedia.org/wiki/Relational_algebra), which we won't expand on here, but it's very interesting if you're math inclined.
 
@@ -214,7 +226,7 @@ ON table1.column_name=table2.column_name;
 ```
 
 **Check:** Consider the JOIN we performed above between `orders` and `customers`. Which side could contain NULL values in the joined table if we performed a LEFT JOIN?
-
+> Answer: there could be NULL values in the `customers` columns
 
 ### Right Join
 
@@ -228,7 +240,7 @@ RIGHT JOIN table2
 ON table1.column_name=table2.column_name;
 ```
 **Check:** Consider the JOIN we performed above between `orders` and `customers`. Which side could contain NULL values in the joined table if we performed a RIGHT JOIN?
-
+> Answer: there could be NULL values in the `orders` columns
 
 ### Full (outer) Join
 
@@ -250,11 +262,48 @@ Previously we explored the products, orders and customers tables. However we had
 
 
 1. How many products per category does the catalog contain? Print the answer with the `CategoryName`, and `Count`.
-
-
+> Answer:
+```sql
+SELECT "CategoryName", count("ProductID")
+FROM products AS p
+JOIN categories AS c
+ON p."CategoryID" = c."CategoryID"
+GROUP BY c."CategoryName"
+```
 - What 5 customers are generating the highest revenue? Print a table with `CustomerID` and `Total Revenue`. You will need to use data from 3 tables.
-
+Answer:
+```sql
+SELECT c."CustomerID",
+       CAST(
+       SUM("UnitPrice" *
+           "Quantity" *
+           (1.0 - "Discount"))
+      AS numeric(36,2)) 
+      AS "Revenue"
+FROM customers AS c
+JOIN orders AS o
+ON c."CustomerID" = o."CustomerID"
+JOIN order_details AS od
+ON o."OrderID" = od."OrderID"
+GROUP BY c."CustomerID"
+ORDER BY "Revenue" DESC
+LIMIT 5
+```
 - In which country are the top 5 suppliers by number of units supplied? Print a table with the supplier's `CompanyName`, `Country` and total number of units supplied.
+>Answer:
+```sql
+select s."CompanyName", s."Country", sum(od."Quantity") AS "UnitsSupplied"
+FROM orders o
+JOIN order_details as od
+ON o."OrderID" = od."OrderID"
+JOIN products p
+ON od."ProductID" = p."ProductID"
+JOIN suppliers s
+ON s."SupplierID" = p."SupplierID"
+GROUP BY s."SupplierID"
+ORDER BY "UnitsSupplied" DESC
+LIMIT 5
+```
 
 <a name="demo_2"></a>
 ## Demo: Sub-queries (15 mins)
@@ -293,6 +342,13 @@ WHERE "CustomerID" =
 
 **Check:** Note that one can get to the same result with a `JOIN` operation. What would be the syntax of the command in that case?
 
+```sql
+SELECT * FROM orders
+WHERE "CustomerID" =
+(SELECT "CustomerID"
+ FROM customers
+ WHERE "Country" = "France")
+```
 
 <a name="ind-practice"></a>
 ## Independent Practice: Other SQL Commands (15 minutes)
